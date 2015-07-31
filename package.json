@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "typescript": {
-    "definition": "index.d.ts"
+    "definition": "cjs.d.ts"
   },
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha",
