@@ -6,27 +6,14 @@ Typescript bindings for Evernote in NodeJS, with promises!
 
 ```
 npm install evernote-promisified-ts
+tsd query evernote --action install --save
+tsd query thrift --action install --save
 tsd link
 ```
 
-You'll also need to includde evernote.d.ts in your build.  evernote-promisified-ts cannot directly declare its
-dependency on them =( as doing so could produce duplicate definition problems, but it does provide the definitions
-under the typings directory.  Using the `tsconfig.json` hotness:
-
-```json
-files: [
-  "node_modules/evernote-promisified-ts/typings/evernote/evernote.d.ts" 
-]
-```
-
-There is an open pull request ([here](https://github.com/borisyankov/DefinitelyTyped/pull/5153)) to add these 
-definitions into DefinitelyTyped so that they are easily accessible via tsd itself, but until that is complete you'll
-have to link to the ones included directly here.
-
 ## Usage
 
-Note that evernote-promisified-ts does not provide its own Promise implementation but requires specifying one to be
-used by the system via `setPromiseEngine`.  bluebird is recommended but not required.
+Note that evernote-promisified-ts does not provide its own Promise implementation but requires specifying one to be used by the system via `setPromiseEngine`.  bluebird is recommended but not required.
 
 
 ```typescript

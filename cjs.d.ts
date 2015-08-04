@@ -1,4 +1,4 @@
 declare module "evernote-promisified-ts" {
-    import * as Api from "index"
+    import Api = require("index");
     export = Api
 }
