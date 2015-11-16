@@ -1,6 +1,7 @@
 # evernote-promisified-ts
 
 Typescript bindings for Evernote in NodeJS, with promises!
+Requires Typescript 1.6.2 for node_modules resolution of typings.
 
 ## Installation
 
@@ -8,7 +9,6 @@ Typescript bindings for Evernote in NodeJS, with promises!
 npm install evernote-promisified-ts
 tsd query evernote --action install --save
 tsd query thrift --action install --save
-tsd link
 ```
 
 ## Usage
@@ -17,7 +17,7 @@ Note that evernote-promisified-ts does not provide its own Promise implementatio
 
 
 ```typescript
-import Promise = require("bluebird");
+import * as Promise from "bluebird";
 import { Evernote } from "evernote";
 import { UserStore, NoteStore, promisifyUserStore, promisifyNoteStore } from "evernote-promisified-ts";
 

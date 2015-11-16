@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "typescript": {
-    "definition": "cjs.d.ts"
+    "typings": "index.d.ts"
   },
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha",
@@ -23,7 +23,7 @@
   "dependencies": {
     "evernote": "^1.25.8",
     "thrift": "^0.9.2",
-    "typescript": "^1.5.3"
+    "typescript": "^1.6.2"
   },
   "devDependencies": {
     "bluebird": "^2.9.32",

@@ -1,5 +1,3 @@
-/// <reference path="../cjs.d.ts"/>
-
 import Promise = require("bluebird");
 import readline = require("readline");
 import assert = require("assert");
