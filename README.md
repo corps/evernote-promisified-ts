@@ -13,8 +13,7 @@ tsd query thrift --action install --save
 
 ## Usage
 
-Note that evernote-promisified-ts does not provide its own Promise implementation but requires specifying one to be used by the system via `setPromiseEngine`.  bluebird is recommended but not required.
-
+evernote-promisified-ts assumes global.Promise exists, so be sure to backfill.
 
 ```typescript
 import * as Promise from "bluebird";
@@ -25,9 +24,7 @@ import { UserStore, NoteStore, promisifyUserStore, promisifyNoteStore } from "ev
 var userStore:UserStore;
 var noteStore:NoteStore;
 
-setPromiseEngine(Promise);
-
-var client = new Evernote.Client({authenticationToken: "myauthtoken", sandbox: false});
+var client = new Evernote.Client({token: "myauthtoken", sandbox: false});
 
 userStore = promisifyUserStore(client.getUserStore());
 noteStore = promisifyNoteStore(client.getNoteStore());
